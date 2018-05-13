@@ -5,6 +5,21 @@
         <meta charset="UTF-8">
     </head>
     <body>
-
-    <body>
+        <form name="form1">
+            <label for="age">Age : </label>
+            <input type="number" name="age" id="age" value=""/>
+            <button type="button" name="valider" id="valider" onClick="controle(form1)">Valider</button>
+        </form>
+        <script>
+            function controle(form1) {
+                var age = document.form1.age.value;
+                if (age< 18){
+                    alert("Vous etes mineur!");
+                }
+                else {
+                    alert('Vous etes majeur!');
+                }
+            }
+        </script>
+    </body>
 </html>

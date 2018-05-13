@@ -5,6 +5,27 @@
     <meta charset="UTF-8">
 </head>
 <body>
+<form name="form1">
+    <label for="pointure">Votre pointure : </label>
+    <input type="number" step="any" name="pointure" id="pointure" value=""/>
+    <label for="yearbirth">Votre date de naissance : </label>
+    <input type="number" name="yearbirth" id="yearbirth" value=""/>
+    <button type="button" name="valider" id="valider" onClick="controle(form1)">Valider</button>
+</form>
+<script>
+    function controle(form1){
+        var pointure= document.form1.pointure.value;
+        var birth= document.form1.yearbirth.value;
+        var result1, result2, result3, result4, result5;
+        result1= pointure*2;
+        result2= result1+5;
+        result3= result2*50;
+        result4= result3- birth;
+        result5= result4+1766;
 
+        alert('Le resultat est: '+result5);
+
+    }
+</script>
 </body>
 </html>
